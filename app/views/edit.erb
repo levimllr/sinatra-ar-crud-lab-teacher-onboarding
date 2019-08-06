@@ -1,0 +1,10 @@
+<h2>The current article contains:</h2>
+<h3>Title: <%=@article.title%></h3>
+<p>Content: <%=@article.content%></p>
+<h2>Submit the following form to update the article:</h2>
+<form method="post" action="/articles/<%=params[:id]%>">
+Title: <input type="text" name="title"/>
+Content: <input type="text" name="content"/>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+<button type="submit" value="submit">submit</button>
+</form>
